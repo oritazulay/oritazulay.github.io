@@ -1,0 +1,15 @@
+# Build/parse scripts (not needed on GitHub Pages)
+parse_wp.py
+extract_content.py
+extract_articles.py
+wp_data.json
+wp_parse_output.txt
+content_output.txt
+articles_output.txt
+
+# Claude settings
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
