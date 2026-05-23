@@ -13,3 +13,25 @@ articles_output.txt
 # OS
 .DS_Store
 Thumbs.db
+
+# Build scripts & output
+build_site.py
+build_lectures.py
+build_lec_output.txt
+build_output.txt
+extract_lectures.py
+lectures_output.txt
+extract_articles.py
+articles_output.txt
+extract_content.py
+content_output.txt
+wp_parse_output.txt
+wp_data.json
+parse_wp.py
+
+# Screenshots & Playwright
+screenshot*.png
+screenshot.mjs
+node_modules/
+package.json
+package-lock.json

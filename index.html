@@ -13,17 +13,23 @@
 <body>
 <header class="site-header" id="site-header">
   <nav class="nav-container">
-    <a href="index.html" class="logo">
-      <span class="logo-name">אורית אזולאי</span>
-      <span class="logo-tagline">מאמנת אישית ומדריכת הורים</span>
+    <a href="index.html" class="logo logo-img-wrap">
+      <img src="https://oritazulay.com/wp-content/uploads/2020/06/לוגו-חדש-1.jpg"
+           alt="אורית אזולאי – לוגו"
+           class="logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <span class="logo-fallback">
+        <span class="logo-name">אורית אזולאי</span>
+        <span class="logo-tagline">מאמנת אישית ומדריכת הורים</span>
+      </span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="תפריט" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">בית</a></li>
       <li><a href="index.html#about">מי אני?</a></li>
       <li><a href="index.html#services">שירותים</a></li>
+      <li><a href="lectures.html">הרצאות וסדנאות</a></li>
       <li><a href="articles.html">מאמרים</a></li>
       <li><a href="index.html#contact" class="nav-cta">צור קשר</a></li>
 
@@ -35,8 +41,8 @@
   <section class="hero" id="hero">
     <div class="hero-content">
       <p class="hero-pretitle">ברוכים הבאים ל<strong>לגדול</strong></p>
-      <h1 class="hero-title">מאמנת אישית ומדריכת הורים</h1>
-      <p class="hero-subtitle">אחרי שני עשורים כאשת חינוך ולאחר שסיימתי תואר שני הקמתי את "לגדול", קליניקה המציעה אימון אישי, הדרכת הורים וסדנאות.</p>
+      <h1 class="hero-title">אורית אזולאי<br><span class="hero-title-sub">מאמנת אישית ומדריכת הורים</span></h1>
+      
       <div class="hero-cta-group">
         <a href="#contact" class="btn btn-primary">קביעת פגישה</a>
         <a href="#services" class="btn btn-outline">השירותים שלי</a>
@@ -70,9 +76,6 @@
           <img src="https://oritazulay.com/wp-content/uploads/2020/06/תמונת-פרופיל-1.jpg"
                alt="אורית אזולאי"
                onerror="this.style.display='none';this.parentElement.classList.add('img-placeholder')"/>
-        </div>
-        <div class="about-quote">
-          <p>"אחרי שני עשורים כאשת חינוך ולאחר שסיימתי תואר שני הקמתי את 'לגדול'"</p>
         </div>
       </div>
       <div class="about-text fade-up">
@@ -345,6 +348,7 @@
       <a href="index.html">בית</a>
       <a href="index.html#about">מי אני?</a>
       <a href="index.html#services">שירותים</a>
+      <a href="lectures.html">הרצאות וסדנאות</a>
       <a href="articles.html">מאמרים</a>
       <a href="index.html#contact">צור קשר</a>
     </div>
