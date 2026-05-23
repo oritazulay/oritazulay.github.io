@@ -87,14 +87,14 @@ const form    = document.getElementById('contact-form');
 const success = document.getElementById('form-success');
 
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
     const name  = form.querySelector('#name').value.trim();
     const phone = form.querySelector('#phone').value.trim();
 
+    // Validation
     if (!name || !phone) {
-      // Simple validation highlight
       [form.querySelector('#name'), form.querySelector('#phone')].forEach(field => {
         if (!field.value.trim()) {
           field.style.borderColor = '#EF4444';
@@ -104,18 +104,44 @@ if (form) {
       return;
     }
 
-    // Build a mailto href as fallback (static site — no backend)
-    const service = form.querySelector('#service').value;
-    const message = form.querySelector('#message').value.trim();
-    const subject = encodeURIComponent(`פנייה מהאתר – ${service || 'כללי'}`);
-    const body    = encodeURIComponent(
-      `שם: ${name}\nטלפון: ${phone}\nנושא: ${service}\n\nהודעה:\n${message}`
-    );
-    window.location.href = `mailto:oritazulay@gmail.com?subject=${subject}&body=${body}`;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'שולח...';
 
-    // Show success state
-    form.style.display = 'none';
-    success.style.display = 'block';
+    const accessKey = form.querySelector('[name="access_key"]').value;
+
+    // If access key is the placeholder, fall back to mailto
+    if (!accessKey || accessKey === 'REPLACE_WITH_WEB3FORMS_KEY') {
+      const service = form.querySelector('#service').value;
+      const message = form.querySelector('#message').value.trim();
+      const subject = encodeURIComponent(`פנייה מהאתר – ${service || 'כללי'}`);
+      const body    = encodeURIComponent(`שם: ${name}\nטלפון: ${phone}\nנושא: ${service}\n\nהודעה:\n${message}`);
+      window.location.href = `mailto:oritazulay@gmail.com?subject=${subject}&body=${body}`;
+      form.style.display = 'none';
+      success.style.display = 'block';
+      return;
+    }
+
+    // Send via Web3Forms
+    try {
+      const data = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        throw new Error(result.message || 'שגיאה בשליחה');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'שליחה →';
+      alert('אירעה שגיאה בשליחה. אנא נסו שנית או צרו קשר ישירות בטלפון.');
+    }
   });
 }
 

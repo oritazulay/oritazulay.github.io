@@ -1381,3 +1381,79 @@ a.contact-item:hover { color: var(--primary); }
   color: var(--primary);
   margin-top: 4px;
 }
+
+/* ── HERO LOGO (in main section) ────────────── */
+.hero-logo-brand {
+  margin-bottom: 22px;
+}
+.hero-logo-img {
+  height: 72px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.12));
+}
+
+/* ── COACHING SECTION ───────────────────────── */
+.coaching { background: var(--bg); }
+.coaching .about-grid { grid-template-columns: 1.2fr 1fr; }
+
+/* ── PARENTING SECTION ──────────────────────── */
+.parenting { background: var(--white); }
+
+/* coaching/parenting process list */
+.process-list {
+  list-style: none;
+  margin: 22px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.process-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+.process-num {
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* tools tag row */
+.tools-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 28px;
+}
+.tool-tag {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+}
+
+/* coaching image uses same wrap as about */
+.coaching .about-img-wrap { aspect-ratio: 4/5; }
+
+@media (max-width: 768px) {
+  .coaching .about-grid { grid-template-columns: 1fr; }
+  .coaching .about-image { order: 2; }
+  .coaching .about-text  { order: 1; }
+}

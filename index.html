@@ -8,349 +8,300 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
-  
 </head>
 <body>
 <header class="site-header" id="site-header">
   <nav class="nav-container">
-    <a href="index.html" class="logo logo-img-wrap">
-      <img src="images/logo.png"
-           alt="אורית אזולאי – לוגו"
-           class="logo-img"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-      <span class="logo-fallback">
-        <span class="logo-name">אורית אזולאי</span>
-        <span class="logo-tagline">מאמנת אישית ומדריכת הורים</span>
-      </span>
+    <a href="index.html" class="logo">
+      <span class="logo-name">אורית אזולאי</span>
+      <span class="logo-tagline">מאמנת אישית ומדריכת הורים</span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="תפריט" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html#about">מי אני?</a></li>
-      <li><a href="index.html#services">שירותים</a></li>
-      <li><a href="lectures.html">הרצאות וסדנאות</a></li>
-      <li><a href="articles.html">מאמרים</a></li>
-      <li><a href="index.html#contact" class="nav-cta">צור קשר</a></li>
-
+      <li><a href="#about">מי אני</a></li>
+      <li><a href="#coaching">אימון אישי</a></li>
+      <li><a href="#parenting">הדרכת הורים</a></li>
+      <li><a href="#articles">מאמרים</a></li>
+      <li><a href="#contact" class="nav-cta">צור קשר</a></li>
     </ul>
   </nav>
 </header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <p class="hero-pretitle">ברוכים הבאים ל<strong>לגדול</strong></p>
-      <h1 class="hero-title">אורית אזולאי<br><span class="hero-title-sub">מאמנת אישית ומדריכת הורים</span></h1>
-      
-      <div class="hero-cta-group">
-        <a href="#contact" class="btn btn-primary">קביעת פגישה</a>
-        <a href="#services" class="btn btn-outline">השירותים שלי</a>
-      </div>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-logo-brand">
+      <img src="images/logo.png" alt="לגדול – קליניקת אורית אזולאי" class="hero-logo-img"
+           onerror="this.style.display='none'"/>
     </div>
-    <div class="hero-image">
-      <div class="hero-img-wrap">
-        <img src="https://oritazulay.com/wp-content/uploads/2020/07/תמונת-קאבר-דף-הבית.jpg"
+    <p class="hero-pretitle">ברוכים הבאים ל<strong>לגדול</strong></p>
+    <h1 class="hero-title">אורית אזולאי<br><span class="hero-title-sub">מאמנת אישית ומדריכת הורים</span></h1>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn btn-primary">קביעת פגישה</a>
+      <a href="#about" class="btn btn-outline">קצת עליי</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-wrap">
+      <img src="images/hero.jpg"
+           alt="אורית אזולאי"
+           onerror="this.style.display='none';this.parentElement.classList.add('img-placeholder')"/>
+    </div>
+    <div class="hero-badge"><span class="badge-num">15+</span><span class="badge-text">שנות ניסיון</span></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat"><strong>15+</strong><span>שנות ניסיון</span></div>
+    <div class="stat"><strong>מאות</strong><span>הורים ומשפחות</span></div>
+    <div class="stat"><strong>20+</strong><span>שנות עבודה בחינוך</span></div>
+    <div class="stat"><strong>NLP</strong><span>כלים מתקדמים</span></div>
+  </div>
+</div>
+
+<!-- מי אני -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-image fade-up">
+      <div class="about-img-wrap">
+        <img src="images/profile.jpg"
              alt="אורית אזולאי"
              onerror="this.style.display='none';this.parentElement.classList.add('img-placeholder')"/>
       </div>
-      <div class="hero-badge"><span class="badge-num">15+</span><span class="badge-text">שנות ניסיון</span></div>
     </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats-strip">
-    <div class="stats-inner">
-      <div class="stat"><strong>15+</strong><span>שנות ניסיון</span></div>
-      <div class="stat"><strong>מאות</strong><span>הורים ומשפחות</span></div>
-      <div class="stat"><strong>20+</strong><span>שנות עבודה בחינוך</span></div>
-      <div class="stat"><strong>NLP</strong><span>כלים מתקדמים</span></div>
+    <div class="about-text fade-up">
+      <p class="section-label">מי אני?</p>
+      <h2 class="section-title">אורית אזולאי</h2>
+      <p class="about-lead">מאמנת אישית ומדריכת הורים למעלה מ־15 שנים | מומחית לגיל הרך</p>
+      <p>אחרי שני עשורים כאשת חינוך ולאחר שסיימתי תואר שני הקמתי את <strong>"לגדול"</strong>, קליניקה המציעה אימון אישי, הדרכת הורים וסדנאות.</p>
+      <p>בעבודתי בקליניקה פיתחתי מודל בו אני משלבת כלים מתחום האימון האישי, NLP והדרכת הורים.</p>
+      <p>אני אמא לשלושה בנים, ובת זוג לדורון, מתגוררת בגני יוחנן – שם גם נמצאת הקליניקה.</p>
+      <p>אני מאמינה שבכל מצב יש לכל אדם את אפשרות הבחירה כיצד לפעול, ויש תמיד יותר מדרך אחת.</p>
+      <ul class="credentials">
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>מדריכת הורים</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>מאמנת אישית בשילוב כלים מעולם ה-NLP</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>מומחית לגיל הרך</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>אימון, הדרכה וסדנאות למאות הורים ואנשי חינוך</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">בואו נדבר</a>
     </div>
   </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section about" id="about">
-    <div class="container about-grid">
-      <div class="about-image fade-up">
-        <div class="about-img-wrap">
-          <img src="https://oritazulay.com/wp-content/uploads/2020/06/תמונת-פרופיל-1.jpg"
-               alt="אורית אזולאי"
-               onerror="this.style.display='none';this.parentElement.classList.add('img-placeholder')"/>
-        </div>
+<!-- אימון אישי -->
+<section class="section coaching" id="coaching">
+  <div class="container about-grid">
+    <div class="about-text fade-up">
+      <p class="section-label">אימון אישי</p>
+      <h2 class="section-title">תהליך השינוי מתחיל כאן</h2>
+      <p class="about-lead">אימון אישי בשילוב כלים מעולם ה-NLP, האימון האדלריאני ודמיון מודרך</p>
+      <p>כולנו פועלים בחיינו בשלושה מישורים עיקריים: עבודה, משפחה וחברה. יש זמנים בחיים שאנו יודעים בברור שאנו זקוקים לשינוי — לעיתים ביחסים במשפחה, לעיתים בקריירה, ולעיתים בתחום אחר המשפיע על חיינו.</p>
+      <p>הדרך להשגת השינוי לא תמיד ברורה ואפילו מפחידה. <strong>האימון האישי נותן מענה מדוייק, משמעותי ומעשי לשינוי.</strong></p>
+      <ol class="process-list">
+        <li><span class="process-num">1</span>בחירת מטרות לאימון</li>
+        <li><span class="process-num">2</span>זיהוי העוצמות והערכים שמניעים אתכם</li>
+        <li><span class="process-num">3</span>זיהוי החסמים והאמונות המונעים השגת המטרה</li>
+        <li><span class="process-num">4</span>הסרת חסמים ופתיחת דרכים חדשות להתבוננות על המציאות</li>
+        <li><span class="process-num">5</span>הגשמת המטרה</li>
+      </ol>
+      <div class="tools-row">
+        <span class="tool-tag">אימון אדלריאני</span>
+        <span class="tool-tag">NLP</span>
+        <span class="tool-tag">דמיון מודרך</span>
+        <span class="tool-tag">פנים אל פנים / Zoom</span>
       </div>
-      <div class="about-text fade-up">
-        <p class="section-label">מי אני?</p>
-        <h2 class="section-title">אורית אזולאי</h2>
-        <p class="about-lead">מאמנת אישית ומדריכת הורים למעלה מ־15 שנים | מומחית לגיל הרך</p>
-        <p>אחרי שני עשורים כאשת חינוך ולאחר שסיימתי תואר שני הקמתי את <strong>"לגדול"</strong>, קליניקה המציעה אימון אישי, הדרכת הורים וסדנאות.</p>
-        <p>בעבודתי בקליניקה פיתחתי מודל בו אני משלבת כלים מתחום האימון האישי, NLP והדרכת הורים.</p>
-        <p>אני אימא לשלושה בנים, ובת זוג לדורון, מתגוררת בגני יוחנן – שם גם נמצאת הקליניקה.</p>
-        <ul class="credentials">
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>מדריכת הורים</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>מאמנת אישית בשילוב כלים מעולם ה-NLP</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>מומחית לגיל הרך</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>אימון, הדרכה וסדנאות למאות הורים ואנשי חינוך</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">בואו נדבר</a>
-      </div>
+      <a href="#contact" class="btn btn-primary">קביעת פגישת היכרות</a>
     </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">מה אני מציעה?</p>
-        <h2 class="section-title">השירותים שלי</h2>
-        <p class="section-subtitle">הורות מקצוע שלא למדתם בשום מקום — אני כאן כדי ללמד אתכם</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-icon" style="background:#E8F5F3; color:#4A9B8E">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>הדרכת הורים</h3>
-          <p>הורות מקצוע שלא למדתם בשום מקום... אני מזמינה אתכם לתהליך של הדרכה הורית פנים אל פנים / Online – תהליך קצר וממוקד.</p>
-          <div class="service-features"><span>פגישות אישיות</span><span>זום / פנים אל פנים</span><span>תהליך ממוקד</span></div>
-          <a href="index.html#contact" class="service-link">לפרטים נוספים ←</a>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon" style="background:#FEF3EC; color:#E8896A">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <h3>אימון אישי</h3>
-          <p>כולנו פועלים בחיינו בשלושה מישורים עיקריים: עבודה, משפחה וחברה. אימון אישי בשילוב כלים מעולם ה-NLP.</p>
-          <div class="service-features"><span>כלי NLP</span><span>שינוי מהיר</span><span>מעקב אישי</span></div>
-          <a href="index.html#contact" class="service-link">לפרטים נוספים ←</a>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon" style="background:#EEF2FF; color:#6C7BE8">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3>הרצאות וסדנאות</h3>
-          <p>ניפגש בזום בקבוצה של עד עשרה משתתפים. האינטימיות בקבוצה מאפשרת לכם לשאול שאלות ולקבל תשובות אישיות.</p>
-          <div class="service-features"><span>עד 10 משתתפים</span><span>אונליין / זום</span><span>4 מפגשים</span></div>
-          <a href="index.html#contact" class="service-link">לפרטים נוספים ←</a>
-        </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- WORKSHOPS -->
-  <section class="workshops-highlight">
-    <div class="container workshops-grid">
-      <div class="workshop-text fade-up">
-        <p class="section-label">סדנאות אונליין</p>
-        <h2 class="section-title">בואו ללמוד מהבית</h2>
-        <p>הורים רבים משתמשים היום באינטרנט כדי למצוא תשובות לשאלות הקשורות בילדיהם. זה מהיר, קל ולעיתים יעיל, אך התשובות הן כלליות ולא עונות במדויק לסיפור האישי של כל הורה. בהרצאות שלי ניפגש בזום בקבוצה של עד עשרה משתתפים. האינטימיות בקבוצה מאפשרת לכם לקחת חלק, לשאול שאלות ולקבל את התשובות שאתם צריכים, והכל בלחיצה על כפתור ומבלי לצאת מהבית.</p>
-        <ul class="workshop-list">
-              <li>
-                <div class="wl-dot" style="background:#E8F5F3"></div>
-                <div>
-                  <strong>גמילה מחיתולים</strong>
-                  <span>כיצד לעבור תהליך גמילה נכון ויעיל | 60 דקות</span>
-                </div>
-              </li>
-              <li>
-                <div class="wl-dot" style="background:#FEF3EC"></div>
-                <div>
-                  <strong>שלום כיתה א'</strong>
-                  <span>תפקידם של ההורים בתהליך המוכנות | 60 דקות</span>
-                </div>
-              </li>
-              <li>
-                <div class="wl-dot" style="background:#EEF2FF"></div>
-                <div>
-                  <strong>הולדת אח/ות</strong>
-                  <span>הקשיים שעלולים להיווצר וכיצד מתמודדים | 60 דקות</span>
-                </div>
-              </li>
-              <li>
-                <div class="wl-dot" style="background:#FFF3F3"></div>
-                <div>
-                  <strong>ADHD – מה זה וכיצד מתמודדים?</strong>
-                  <span>סדנה להורים לילדי ADHD | 4 מפגשים</span>
-                </div>
-              </li>
-              <li>
-                <div class="wl-dot" style="background:#F3F3FF"></div>
-                <div>
-                  <strong>בין אימהות לקריירה</strong>
-                  <span>סדנה לאימהות עובדות | 4 מפגשים</span>
-                </div>
-              </li>
-              <li>
-                <div class="wl-dot" style="background:#F0FDF4"></div>
-                <div>
-                  <strong>הבסיס להורות בגיל הרך</strong>
-                  <span>ממש לבסס מערכת יחסים נכונה עם הילדים | 4 מפגשים</span>
-                </div>
-              </li></ul>
-        <a href="#contact" class="btn btn-primary">לרישום והפרטים</a>
-      </div>
-      <div class="workshop-image fade-up">
-        <img src="https://oritazulay.com/wp-content/uploads/2020/07/סדנאות-והרצאות-אונליין.jpg"
-             alt="סדנאות אונליין"
+    <div class="about-image fade-up">
+      <div class="about-img-wrap">
+        <img src="images/coaching.jpg"
+             alt="אימון אישי – אורית אזולאי"
              onerror="this.style.display='none';this.parentElement.classList.add('img-placeholder')"/>
-        <div class="workshop-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.9L15 14"/>
-            <rect x="1" y="6" width="15" height="12" rx="2"/>
-          </svg>
-          <span>זום | Online</span>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ARTICLES STRIP -->
-  <section class="section articles-strip" id="articles-strip">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">מאמרים</p>
-        <h2 class="section-title">מאמרים בנושאי הורות ומשפחה</h2>
-        <p class="section-subtitle">טיפים מעשיים ותובנות מהשטח</p>
-      </div>
-      <div class="art-mini-grid">
-        <a href="articles/choose.html" class="art-mini fade-up">
-          <div class="art-mini-bar" style="background:#4A9B8E"></div>
-          <div class="art-mini-body">
-            <h4>חשוב לתת לילד לבחור</h4>
-            <p>חשוב לתת לילד לבחור לעיתים כל כך קשה לנו לבחור! למה? כי ברגע שבחרנו משהו,...</p>
-            <span class="art-mini-link">קראו עוד ←</span>
-          </div>
-        </a>
-        <a href="articles/siblings.html" class="art-mini fade-up">
-          <div class="art-mini-bar" style="background:#E8896A"></div>
-          <div class="art-mini-body">
-            <h4>מריבות בין אחים</h4>
-            <p>מריבות בין אחים כל כך חיכינו להיות ביחד בשבת החורפית, גשם וקר בחוץ ואנחנו בבית,...</p>
-            <span class="art-mini-link">קראו עוד ←</span>
-          </div>
-        </a>
-        <a href="articles/patience.html" class="art-mini fade-up">
-          <div class="art-mini-bar" style="background:#6C7BE8"></div>
-          <div class="art-mini-body">
-            <h4>סבלנות בחינוך ילדים</h4>
-            <p>סבלנות בחינוך ילדים "מי שיש לו סבלנות יכול להשיג כל מה שירצה" (בנג'מין פרנקלין)...</p>
-            <span class="art-mini-link">קראו עוד ←</span>
-          </div>
-        </a>
-        <a href="articles/boundaries.html" class="art-mini fade-up">
-          <div class="art-mini-bar" style="background:#22C55E"></div>
-          <div class="art-mini-body">
-            <h4>אתה עובר כל גבול</h4>
-            <p>אתה עובר כל גבול כמה פעמים שמענו את עצמנו, אומרים את המשפט הזה? כל הורה מבין את...</p>
-            <span class="art-mini-link">קראו עוד ←</span>
-          </div>
-        </a>
-        <a href="articles/boredom.html" class="art-mini fade-up">
-          <div class="art-mini-bar" style="background:#F59E0B"></div>
-          <div class="art-mini-body">
-            <h4>שיעמום בימי קורונה</h4>
-            <p>שיעמום בימי קורונה איך נלמד את הילד להעסיק את עצמו? כמה הרבה שינויים הביאה לנו...</p>
-            <span class="art-mini-link">קראו עוד ←</span>
-          </div>
-        </a>
-        <a href="articles/winter.html" class="art-mini fade-up">
-          <div class="art-mini-bar" style="background:#EC4899"></div>
-          <div class="art-mini-body">
-            <h4>פעילות עם ילדים בחורף</h4>
-            <p>פעילות עם ילדים בחורף החורף ממש כאן ובגדול. כל יציאה מהבית נראית כמו משימה קשה...</p>
-            <span class="art-mini-link">קראו עוד ←</span>
-          </div>
-        </a></div>
-      <div style="text-align:center; margin-top:40px;">
-        <a href="articles.html" class="btn btn-outline">לכל המאמרים</a>
+<!-- הדרכת הורים -->
+<section class="section parenting" id="parenting">
+  <div class="container about-grid">
+    <div class="about-image fade-up">
+      <div class="about-img-wrap">
+        <img src="images/parenting.jpg"
+             alt="הדרכת הורים – אורית אזולאי"
+             onerror="this.style.display='none';this.parentElement.classList.add('img-placeholder')"/>
       </div>
     </div>
-  </section>
+    <div class="about-text fade-up">
+      <p class="section-label">הדרכת הורים</p>
+      <h2 class="section-title">הורות — מקצוע שלא למדתם בשום מקום</h2>
+      <p class="about-lead">הדרכה הורית פנים אל פנים / Online — תהליך קצר וממוקד</p>
+      <p>גם אצלכם יש הרבה מריבות בין הילדים? סוף יום הופך להיות סאגה ארוכה ומייגעת? אתם "מאבדים את זה" בכל פעם שהילד כועס ומתפרץ, ובאופן כללי האווירה בבית לא נעימה?</p>
+      <p><strong>אתם לא לבד!</strong> כל הורה מתמודד עם אתגרים בחינוך וגידול ילדיו. אני מזמינה אתכם לתהליך של הדרכה הורית — תהליך קצר וממוקד שמחולל שינוי מיידי.</p>
+      <ul class="credentials">
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>ללמוד להתמודד עם אתגרי ההורות</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>לשפר את היחסים עם ילדיכם ולהרגיש נינוחים ושמחים</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>לשפר את האווירה בבית</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>לגדל ילדים בעלי דימוי עצמי גבוה, עצמאיים ושמחים</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">לקביעת פגישה אישית</a>
+    </div>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info fade-up">
-        <p class="section-label">בואו נדבר</p>
-        <h2 class="section-title">צור קשר</h2>
-        <p>לקביעת פגישה אישית התקשרו עכשיו או השאירו פרטים ואחזור אליכם.</p>
-        <div class="contact-details">
-          <a href="tel:0524233485" class="contact-item">
-            <div class="contact-icon" style="background:#E8F5F3;color:#4A9B8E">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-            </div>
-            <div><strong>052-4233485</strong><span>זמינה בשעות הבוקר והצהריים</span></div>
-          </a>
-          <a href="mailto:oritazulay@gmail.com" class="contact-item">
-            <div class="contact-icon" style="background:#FEF3EC;color:#E8896A">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div><strong>oritazulay@gmail.com</strong><span>מענה תוך 24 שעות</span></div>
-          </a>
-          <div class="contact-item">
-            <div class="contact-icon" style="background:#EEF2FF;color:#6C7BE8">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div><strong>גני יוחנן</strong><span>פגישות פנים אל פנים / אונליין</span></div>
-          </div>
+<!-- מאמרים -->
+<section class="section articles-strip" id="articles">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">מאמרים</p>
+      <h2 class="section-title">מאמרים בנושאי הורות ומשפחה</h2>
+      <p class="section-subtitle">טיפים מעשיים ותובנות מהשטח</p>
+    </div>
+    <div class="art-mini-grid">
+      <a href="articles/choose.html" class="art-mini fade-up">
+        <div class="art-mini-bar" style="background:#4A9B8E"></div>
+        <div class="art-mini-body">
+          <h4>חשוב לתת לילד לבחור</h4>
+          <p>כל כך קשה לנו לבחור! ברגע שבחרנו משהו, אנו מוותרים על שאר האפשרויות...</p>
+          <span class="art-mini-link">קראו עוד ←</span>
         </div>
-        <a href="https://wa.me/972524233485" target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.107 1.52 5.836L.057 23.625a.375.375 0 0 0 .459.459l5.787-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.87 9.87 0 0 1-5.034-1.378l-.36-.214-3.438.87.898-3.331-.234-.378A9.86 9.86 0 0 1 2.1 12c0-5.46 4.44-9.9 9.9-9.9s9.9 4.44 9.9 9.9-4.44 9.9-9.9 9.9z"/></svg>
-          שלחו הודעת WhatsApp
+      </a>
+      <a href="articles/siblings.html" class="art-mini fade-up">
+        <div class="art-mini-bar" style="background:#E8896A"></div>
+        <div class="art-mini-body">
+          <h4>מריבות בין אחים</h4>
+          <p>כל כך חיכינו להיות ביחד בשבת החורפית, גשם וקר בחוץ ואנחנו בבית...</p>
+          <span class="art-mini-link">קראו עוד ←</span>
+        </div>
+      </a>
+      <a href="articles/patience.html" class="art-mini fade-up">
+        <div class="art-mini-bar" style="background:#6C7BE8"></div>
+        <div class="art-mini-body">
+          <h4>סבלנות בחינוך ילדים</h4>
+          <p>"מי שיש לו סבלנות יכול להשיג כל מה שירצה" (בנג'מין פרנקלין)...</p>
+          <span class="art-mini-link">קראו עוד ←</span>
+        </div>
+      </a>
+      <a href="articles/boundaries.html" class="art-mini fade-up">
+        <div class="art-mini-bar" style="background:#22C55E"></div>
+        <div class="art-mini-body">
+          <h4>אתה עובר כל גבול</h4>
+          <p>כמה פעמים שמענו את עצמנו אומרים את המשפט הזה? כל הורה מבין את...</p>
+          <span class="art-mini-link">קראו עוד ←</span>
+        </div>
+      </a>
+      <a href="articles/boredom.html" class="art-mini fade-up">
+        <div class="art-mini-bar" style="background:#F59E0B"></div>
+        <div class="art-mini-body">
+          <h4>שיעמום בימי קורונה</h4>
+          <p>כמה הרבה שינויים הביאה לנו הקורונה... איך נלמד את הילד להעסיק את עצמו?</p>
+          <span class="art-mini-link">קראו עוד ←</span>
+        </div>
+      </a>
+      <a href="articles/winter.html" class="art-mini fade-up">
+        <div class="art-mini-bar" style="background:#EC4899"></div>
+        <div class="art-mini-body">
+          <h4>פעילות עם ילדים בחורף</h4>
+          <p>החורף ממש כאן ובגדול. כל יציאה מהבית נראית כמו משימה קשה...</p>
+          <span class="art-mini-link">קראו עוד ←</span>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="articles.html" class="btn btn-outline">לכל המאמרים</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info fade-up">
+      <p class="section-label">בואו נדבר</p>
+      <h2 class="section-title">צור קשר</h2>
+      <p>לקביעת פגישה אישית התקשרו עכשיו או השאירו פרטים ואחזור אליכם.</p>
+      <div class="contact-details">
+        <a href="tel:0524233485" class="contact-item">
+          <div class="contact-icon" style="background:#E8F5F3;color:#4A9B8E">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div><strong>052-4233485</strong><span>זמינה בשעות הבוקר והצהריים</span></div>
+        </a>
+        <a href="mailto:oritazulay@gmail.com" class="contact-item">
+          <div class="contact-icon" style="background:#FEF3EC;color:#E8896A">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div><strong>oritazulay@gmail.com</strong><span>מענה תוך 24 שעות</span></div>
+        </a>
+        <a href="https://maps.google.com/maps?q=31.8580825,34.8406678" target="_blank" rel="noopener" class="contact-item" style="text-decoration:none;cursor:pointer" title="פתח במפה">
+          <div class="contact-icon" style="background:#EEF2FF;color:#6C7BE8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div><strong>הצבעוני 139, גני יוחנן</strong><span>פגישות פנים אל פנים / אונליין</span></div>
         </a>
       </div>
-      <div class="contact-form-wrap fade-up">
-        <form class="contact-form" id="contact-form" novalidate>
-          <h3>השאירו פרטים ואחזור אליכם</h3>
-          <div class="form-group"><label for="name">שם מלא</label><input type="text" id="name" name="name" placeholder="שם מלא" required/></div>
-          <div class="form-group"><label for="phone">טלפון</label><input type="tel" id="phone" name="phone" placeholder="05X-XXXXXXX" required/></div>
-          <div class="form-group">
-            <label for="service">נושא פנייה</label>
-            <select id="service" name="service">
-              <option value="">בחרו נושא...</option>
-              <option>הדרכת הורים</option>
-              <option>אימון אישי</option>
-              <option>הרצאה / סדנה</option>
-              <option>אחר</option>
-            </select>
-          </div>
-          <div class="form-group"><label for="message">הודעה (לא חובה)</label><textarea id="message" name="message" placeholder="ספרו לי קצת על עצמכם ועל מה שמעסיק אתכם..." rows="4"></textarea></div>
-          <button type="submit" class="btn btn-primary btn-full">שליחה →</button>
-          <p class="form-note">* הפרטים שלכם שמורים אצלי בסודיות מוחלטת</p>
-        </form>
-        <div class="form-success" id="form-success" style="display:none">
-          <div class="success-icon">✓</div>
-          <h3>תודה רבה!</h3>
-          <p>קיבלתי את פנייתכם ואחזור אליכם בהקדם.</p>
+      <a href="https://wa.me/972524233485" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.107 1.52 5.836L.057 23.625a.375.375 0 0 0 .459.459l5.787-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.87 9.87 0 0 1-5.034-1.378l-.36-.214-3.438.87.898-3.331-.234-.378A9.86 9.86 0 0 1 2.1 12c0-5.46 4.44-9.9 9.9-9.9s9.9 4.44 9.9 9.9-4.44 9.9-9.9 9.9z"/></svg>
+        שלחו הודעת WhatsApp
+      </a>
+    </div>
+    <div class="contact-form-wrap fade-up">
+      <form class="contact-form" id="contact-form" novalidate>
+        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY"/>
+        <input type="hidden" name="subject" value="פנייה חדשה מהאתר – אורית אזולאי"/>
+        <input type="hidden" name="from_name" value="האתר של אורית אזולאי"/>
+        <h3>השאירו פרטים ואחזור אליכם</h3>
+        <div class="form-group"><label for="name">שם מלא</label><input type="text" id="name" name="name" placeholder="שם מלא" required/></div>
+        <div class="form-group"><label for="phone">טלפון</label><input type="tel" id="phone" name="phone" placeholder="05X-XXXXXXX" required/></div>
+        <div class="form-group">
+          <label for="service">נושא פנייה</label>
+          <select id="service" name="service">
+            <option value="">בחרו נושא...</option>
+            <option>הדרכת הורים</option>
+            <option>אימון אישי</option>
+            <option>הרצאה / סדנה</option>
+            <option>אחר</option>
+          </select>
         </div>
+        <div class="form-group"><label for="message">הודעה (לא חובה)</label><textarea id="message" name="message" placeholder="ספרו לי קצת על עצמכם ועל מה שמעסיק אתכם..." rows="4"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-full">שליחה →</button>
+        <p class="form-note">* הפרטים שלכם שמורים אצלי בסודיות מוחלטת</p>
+      </form>
+      <div class="form-success" id="form-success" style="display:none">
+        <div class="success-icon">✓</div>
+        <h3>תודה רבה!</h3>
+        <p>קיבלתי את פנייתכם ואחזור אליכם בהקדם.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
       <p class="footer-name">אורית אזולאי</p>
       <p class="footer-tagline">מאמנת אישית ומדריכת הורים | קליניקת "לגדול"</p>
-      <p class="footer-location">גני יוחנן</p>
+      <p class="footer-location"><a href="https://maps.google.com/maps?q=31.8580825,34.8406678" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">📍 הצבעוני 139, גני יוחנן</a></p>
     </div>
     <div class="footer-links">
-      <a href="index.html">בית</a>
-      <a href="index.html#about">מי אני?</a>
-      <a href="index.html#services">שירותים</a>
-      <a href="lectures.html">הרצאות וסדנאות</a>
-      <a href="articles.html">מאמרים</a>
-      <a href="index.html#contact">צור קשר</a>
+      <a href="#about">מי אני</a>
+      <a href="#coaching">אימון אישי</a>
+      <a href="#parenting">הדרכת הורים</a>
+      <a href="#articles">מאמרים</a>
+      <a href="#contact">צור קשר</a>
     </div>
     <div class="footer-contact">
       <a href="tel:0524233485">052-4233485</a>
