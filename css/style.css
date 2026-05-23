@@ -844,10 +844,10 @@ a.contact-item:hover { color: var(--primary); }
   .hero-img-wrap { aspect-ratio: 1; }
 
   /* Stats */
-  .stats-inner { flex-wrap: nowrap; gap: 8px; justify-content: space-between; }
+  .stats-inner { flex-wrap: nowrap; gap: 6px; justify-content: space-between; padding: 0 4px; }
   .stat { flex: 1; min-width: 0; }
-  .stat strong { font-size: 1.25rem; }
-  .stat span { font-size: .68rem; }
+  .stat strong { font-size: 1.1rem; }
+  .stat span { font-size: .6rem; line-height: 1.25; text-align: center; }
 
   /* Section header – align right on mobile like other section labels */
   .section-header { text-align: right; }
