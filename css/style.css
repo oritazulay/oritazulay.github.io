@@ -849,6 +849,10 @@ a.contact-item:hover { color: var(--primary); }
   .stat strong { font-size: 1.25rem; }
   .stat span { font-size: .68rem; }
 
+  /* Section header – align right on mobile like other section labels */
+  .section-header { text-align: right; }
+  .section-header .section-subtitle { margin: 0; }
+
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .about-image { max-width: 320px; margin: 0 auto; }
