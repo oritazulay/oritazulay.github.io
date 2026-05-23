@@ -1457,6 +1457,6 @@ a.contact-item:hover { color: var(--primary); }
 
 @media (max-width: 768px) {
   .coaching .about-grid { grid-template-columns: 1fr; }
-  .coaching .about-image { order: 2; }
-  .coaching .about-text  { order: 1; }
+  .coaching .about-image { order: 1; }
+  .coaching .about-text  { order: 2; }
 }
