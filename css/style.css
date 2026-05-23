@@ -804,7 +804,7 @@ a.contact-item:hover { color: var(--primary); }
   /* Nav */
   .nav-container { position: relative; justify-content: center; }
   .hamburger { display: flex; position: absolute; left: 24px; top: 50%; transform: translateY(-50%); }
-  .logo { align-items: center; }
+  .logo { align-items: flex-end; }
   .nav-links {
     position: fixed;
     top: 68px;
