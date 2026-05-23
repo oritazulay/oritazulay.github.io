@@ -876,12 +876,13 @@ a.contact-item:hover { color: var(--primary); }
 }
 
 /* ── SCROLL ANIMATIONS ──────────────────────── */
-.fade-up {
+/* Only animate when JS has confirmed IntersectionObserver is supported */
+.js-loaded .fade-up {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity .55s ease, transform .55s ease;
 }
-.fade-up.visible {
+.js-loaded .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }

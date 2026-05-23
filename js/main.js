@@ -53,10 +53,13 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(s => observer.observe(s));
 
 // ── Scroll fade-up animations ─────────────────
+// Mark body so CSS animations activate only when JS is running
+document.body.classList.add('js-loaded');
+
 const fadeEls = document.querySelectorAll(
   '.service-card, .testimonial-card, .about-text, .about-image, ' +
   '.contact-info, .contact-form-wrap, .workshop-text, .workshop-image, ' +
-  '.stat'
+  '.stat, .art-mini, .article-card'
 );
 fadeEls.forEach(el => el.classList.add('fade-up'));
 
@@ -67,7 +70,7 @@ const fadeObserver = new IntersectionObserver(entries => {
       fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
 fadeEls.forEach(el => fadeObserver.observe(el));
 
