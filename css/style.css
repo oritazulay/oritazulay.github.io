@@ -838,6 +838,7 @@ a.contact-item:hover { color: var(--primary); }
     text-align: center;
   }
   .hero-title { text-align: center; }
+  .hero-title-sub { text-align: center; display: block; }
   .hero-logo-img { margin: 0 auto; }
   .hero-subtitle { margin-left: auto; margin-right: auto; }
   .hero-cta-group { justify-content: center; }
