@@ -57,19 +57,19 @@ ul { list-style: none; }
 /* ── TYPOGRAPHY ─────────────────────────────── */
 .section-label {
   display: inline-block;
-  font-size: .8rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--primary);
   background: var(--primary-light);
-  padding: 4px 12px;
+  padding: 6px 16px;
   border-radius: 20px;
   margin-bottom: 14px;
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 800;
   color: var(--dark);
   line-height: 1.25;
@@ -247,9 +247,13 @@ ul { list-style: none; }
   font-weight: 600;
   margin-bottom: 14px;
   background: var(--primary-light);
-  display: inline-block;
+  display: block;
+  text-align: center;
   padding: 5px 14px;
   border-radius: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -258,6 +262,7 @@ ul { list-style: none; }
   color: var(--dark);
   line-height: 1.2;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .hero-subtitle {
@@ -272,6 +277,7 @@ ul { list-style: none; }
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-image { position: relative; }
@@ -1383,6 +1389,14 @@ a.contact-item:hover { color: var(--primary); }
 }
 
 /* ── HERO TITLE SUB-LINE ────────────────────── */
+.hero-title-main {
+  display: block;
+  background: linear-gradient(135deg, var(--primary), #a0c828);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .hero-title-sub {
   display: block;
   font-size: clamp(1.3rem, 2.5vw, 1.9rem);
@@ -1394,6 +1408,8 @@ a.contact-item:hover { color: var(--primary); }
 /* ── HERO LOGO (in main section) ────────────── */
 .hero-logo-brand {
   margin-bottom: 22px;
+  display: flex;
+  justify-content: center;
 }
 .hero-logo-img {
   height: 72px;
