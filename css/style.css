@@ -1473,6 +1473,128 @@ a.contact-item:hover { color: var(--primary); }
   border-radius: 20px;
   border: 1px solid var(--primary);
 }
+.tool-tag-btn {
+  font-family: 'Heebo', sans-serif;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.tool-tag-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58,153,153,.3);
+}
+
+/* ── TOOL MODALS ────────────────────────────── */
+.tool-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.tool-modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.tool-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  max-width: 540px;
+  width: 100%;
+  padding: 44px 40px 40px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(24px) scale(.97);
+  transition: transform .25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+  direction: rtl;
+}
+.tool-modal-overlay.open .tool-modal {
+  transform: translateY(0) scale(1);
+}
+.tool-modal-close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: .9rem;
+  color: var(--text-muted);
+  transition: all var(--transition);
+  line-height: 1;
+}
+.tool-modal-close:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.tool-modal-img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+}
+.tool-modal-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 4px;
+}
+.tool-modal-subtitle {
+  font-size: .9rem;
+  color: var(--primary);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: .04em;
+}
+.tool-modal-quote {
+  background: var(--primary-light);
+  border-right: 4px solid var(--primary);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  color: var(--primary-dark);
+  font-size: .95rem;
+  font-weight: 500;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+.tool-modal-text {
+  color: var(--text-muted);
+  font-size: .97rem;
+  line-height: 1.85;
+}
+.tool-modal-text p { margin-bottom: 12px; }
+.tool-modal-text p:last-child { margin-bottom: 0; }
+.tool-modal-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+@media (max-width: 480px) {
+  .tool-modal { padding: 36px 22px 28px; }
+  .tool-modal-title { font-size: 1.25rem; }
+}
 
 /* coaching image uses same wrap as about */
 .coaching .about-img-wrap { aspect-ratio: 4/5; }

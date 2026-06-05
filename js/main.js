@@ -145,6 +145,75 @@ if (form) {
   });
 }
 
+// ── Tool modals ───────────────────────────────
+const modalData = {
+  adlerian: {
+    title: 'אימון אדלריאני',
+    img: 'images/modal-adlerian.png',
+    paragraphs: [
+      'בבסיס הגישה האדלריאנית עומדת ההנחה שלכל אדם יש יכולת בחירה חופשית בכל רגע נתון בחייו.',
+      'במהלך האימון אני מקשיבה לדרך שבה המתאמן מפרש את מציאות חייו ובמקומות שבהם הפרשנות מגבילה אותו אנו בוחנים יחד אפשרויות פרשנות נוספות.',
+      'כאשר המתאמן מרגיש מחוזק ומודע יותר למגוון האפשרויות ולחופש הבחירה, הוא יכול להתחיל ולשנות את מציאות חייו וליצור את המציאות הרצויה לו.'
+    ]
+  },
+  nlp: {
+    title: 'NLP',
+    subtitle: 'Neuro, Linguistic, Programming',
+    img: 'images/modal-nlp.png',
+    paragraphs: [
+      'NLP היא שיטה המביאה מכלול טכניקות וכלים אבחוניים המבוססים על ההנחה הכללית שלכל התנהגות יש מבנה שניתן לדגום, ללמוד ולשנות.',
+      'כאשר דפוס מסוים מחבל בנו ומעכב אותנו, נוכל לשנות אותו באמצעות שיטת ה-NLP.'
+    ]
+  },
+  imagery: {
+    title: 'דמיון מודרך',
+    quote: '"בני אדם אינם שבויים של גורלם אלא רק של דמיונם" — פרנקלין רוזוולט',
+    img: 'images/modal-guided-imagery.png',
+    paragraphs: [
+      'הדמיון המודרך הינו מונח המתאר מצב בו נעזרים בכוחו העצמתי של הדמיון לשם השגת מטרות באופן מודע.',
+      'מחקרים מדעיים הוכיחו כי המוח האנושי מגיב באופן זהה לאירוע בין אם התרחש במציאות ובין אם היה דמיוני.',
+      'כשאדם מדמיין שביכולתו לשנות מצב קיים, גדל הסיכוי שהוא יצליח לערוך את השינוי.'
+    ]
+  }
+};
+
+const overlay   = document.getElementById('tool-modal-overlay');
+const modalInner = document.getElementById('tool-modal-inner');
+const closeBtn  = document.getElementById('tool-modal-close');
+
+function openModal(key) {
+  const d = modalData[key];
+  if (!d) return;
+
+  let html = `<img class="tool-modal-img" src="${d.img}" alt="${d.title}"/>`;
+  html += `<h2 class="tool-modal-title" id="tool-modal-title">${d.title}</h2>`;
+  if (d.subtitle) html += `<p class="tool-modal-subtitle">${d.subtitle}</p>`;
+  if (d.quote) {
+    html += `<blockquote class="tool-modal-quote">${d.quote}</blockquote>`;
+  }
+  html += `<div class="tool-modal-text">`;
+  d.paragraphs.forEach(p => { html += `<p>${p}</p>`; });
+  html += `</div>`;
+
+  modalInner.innerHTML = html;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  closeBtn.focus();
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.tool-tag-btn').forEach(btn => {
+  btn.addEventListener('click', () => openModal(btn.dataset.modal));
+});
+
+closeBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
 // ── Smooth scroll polyfill for older Safari ───
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {

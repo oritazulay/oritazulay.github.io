@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css?v=12"/>
+  <link rel="stylesheet" href="css/style.css?v=13"/>
 </head>
 <body>
 <header class="site-header" id="site-header">
@@ -109,9 +109,9 @@
         <li><span class="process-num">5</span>הגשמת המטרה</li>
       </ol>
       <div class="tools-row">
-        <span class="tool-tag">אימון אדלריאני</span>
-        <span class="tool-tag">NLP</span>
-        <span class="tool-tag">דמיון מודרך</span>
+        <button class="tool-tag tool-tag-btn" data-modal="adlerian">אימון אדלריאני</button>
+        <button class="tool-tag tool-tag-btn" data-modal="nlp">NLP</button>
+        <button class="tool-tag tool-tag-btn" data-modal="imagery">דמיון מודרך</button>
       </div>
       <a href="#contact" class="btn btn-primary">קביעת פגישת היכרות</a>
     </div>
@@ -309,6 +309,14 @@
     <p>© 2025 אורית אזולאי – כל הזכויות שמורות</p>
   </div>
 </footer>
-<script src="js/main.js?v=12"></script>
+<!-- Tool Modals -->
+<div class="tool-modal-overlay" id="tool-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="tool-modal-title">
+  <div class="tool-modal">
+    <button class="tool-modal-close" id="tool-modal-close" aria-label="סגור">✕</button>
+    <div id="tool-modal-inner"></div>
+  </div>
+</div>
+
+<script src="js/main.js?v=13"></script>
 </body>
 </html>
