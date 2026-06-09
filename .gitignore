@@ -1,4 +1,4 @@
-# Build/parse scripts (not needed on GitHub Pages)
+# Build/parse scripts (not needed on GitHub Pages) test
 parse_wp.py
 extract_content.py
 extract_articles.py
